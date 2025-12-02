@@ -69,17 +69,17 @@ import {reactive} from "vue";
 // 静态组织数据（从 http://10.17.0.10:8211/endpoint/org/list 获取）
 const orgListData = {
   "conference_chairs": [
-    {"id":14,"avatar":"/cjnlp2025/images/committee/yuhao.png","name":"Hao Yu","organization":"Legend Holdings Corporation","order":1},
-    {"id":13,"avatar":"/cjnlp2025/images/committee/sutou.png","name":"Katsuhito Sudoh","organization":"Nara Women's University","order":0}
+    {"id":14,"avatar":"/CJNLP2025/images/committee/yuhao.png","name":"Hao Yu","organization":"Legend Holdings Corporation","order":1},
+    {"id":13,"avatar":"/CJNLP2025/images/committee/sutou.png","name":"Katsuhito Sudoh","organization":"Nara Women's University","order":0}
   ],
   "program_chairs": [
-    {"id":16,"avatar":"/cjnlp2025/images/committee/chengfei.png","name":"Fei Cheng","organization":"Kyoto University","order":1},
-    {"id":17,"avatar":"/cjnlp2025/images/committee/linhongyu.png","name":"Hongyu Lin","organization":"Institute of Software Chinese Academy of Sciences","order":0}  
+    {"id":16,"avatar":"/CJNLP2025/images/committee/chengfei.png","name":"Fei Cheng","organization":"Kyoto University","order":1},
+    {"id":17,"avatar":"/CJNLP2025/images/committee/linhongyu.png","name":"Hongyu Lin","organization":"Institute of Software Chinese Academy of Sciences","order":0}  
   ],
   "organizing_committee": [
-    {"id":11,"avatar":"/cjnlp2025/images/committee/licuochao.png","name":"Zuchao Li","organization":"Wuhan University","order":1},
-    {"id":15,"avatar":"/cjnlp2025/images/committee/zhangzuosheng.png","name":"Zhuosheng Zhang","organization":"Shanghai Jiao Tong University","order":0},
-    {"id":18,"avatar":"/cjnlp2025/images/committee/jiangshu.png","name":"Shu Jiang","organization":"Nantong University","order":0}
+    {"id":11,"avatar":"/CJNLP2025/images/committee/licuochao.png","name":"Zuchao Li","organization":"Wuhan University","order":1},
+    {"id":15,"avatar":"/CJNLP2025/images/committee/zhangzuosheng.png","name":"Zhuosheng Zhang","organization":"Shanghai Jiao Tong University","order":0},
+    {"id":18,"avatar":"/CJNLP2025/images/committee/jiangshu.png","name":"Shu Jiang","organization":"Nantong University","order":0}
   ]
 }
 

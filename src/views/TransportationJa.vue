@@ -121,7 +121,7 @@ const initMap = () => {
     // 会場の場合、画像を追加
     if (location === locations.hotel) {
       content += `
-        <img src="/cjnlp2025/images/hotel/hotel-1.jpg" style="width: 100%; margin-top: 8px; border-radius: 4px;">
+        <img src="/CJNLP2025/images/hotel/hotel-1.jpg" style="width: 100%; margin-top: 8px; border-radius: 4px;">
       `
     }
     
