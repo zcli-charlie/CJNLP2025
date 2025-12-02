@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "首页",
+    "committee": "会议组织",
+    "schedule": "日程安排",
+    "submission": "报告提交",
+    "proceedings": "报告集",
+    "registration": "会议注册",
+    "transportation": "交通住宿",
+    "contact": "会议联络",
+    "historical": "历届CJNLP",
+    "memory": "记忆",
+    "information-query": "信息查询"
+  }
+} 

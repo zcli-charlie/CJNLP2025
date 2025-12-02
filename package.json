@@ -1,0 +1,31 @@
+{
+  "name": "cjnlp-web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vuemap/vue-amap": "^2.1.11",
+    "@vuemap/vue-amap-extra": "^2.1.5",
+    "axios": "1.7.4",
+    "element-plus": "^2.3.12",
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.14.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "code-inspector-plugin": "^0.16.1",
+    "gh-pages": "^6.3.0",
+    "sass": "^1.82.0",
+    "vite": "^4.4.9"
+  }
+}

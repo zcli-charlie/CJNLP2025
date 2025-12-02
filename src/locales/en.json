@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Home",
+    "committee": "Committee",
+    "schedule": "Schedule",
+    "submission": "Submission",
+    "proceedings": "Proceedings",
+    "registration": "Registration",
+    "transportation": "Transportation",
+    "contact": "Contact",
+    "historical": "History",
+    "memory": "Memories",
+    "information-query": "Information Query"
+  }
+} 

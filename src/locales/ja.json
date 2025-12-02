@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "committee": "委員会",
+    "schedule": "日程",
+    "submission": "論文投稿",
+    "proceedings": "論文集",
+    "registration": "参加登録",
+    "transportation": "交通案内",
+    "contact": "お問い合わせ",
+    "historical": "過去のCJNLP",
+    "memory": "思い出",
+    "information-query": "情報検索"
+  }
+} 
