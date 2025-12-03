@@ -152,7 +152,7 @@ const conferenceData = {
   "link": "",
   "title": "第二十二届中日自然语言处理联合推进会议",
   "title_en": "The 22nd China-Japan Natural Language Processing Joint Promotion Conference，CJNLP2025",
-  "title_jp": "第22回日中自然言語処理共同推進会議",
+  "title_jp": "第22回中日自然言語処理共同推進会議",
   "description": "聚焦自然语言处理、大模型、智能体等前沿技术研究，探索中日双边科研合作新机遇。",
   "description_en": "Focus on cutting-edge technology research such as natural language processing, large models, and intelligent agents, and explore new opportunities for China-Japan bilateral scientific research cooperation.",
   "description_jp": "自然言語処理、大規模言語モデル、エージェントなどの最先端技術研究に焦点を当て、日中間の新たな科学研究協力の機会を模索する。",
