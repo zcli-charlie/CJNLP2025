@@ -107,8 +107,9 @@ const totalCount = ref(0)
 // 静态照片数据 - 2025年CJNLP照片
 // 这里存储所有照片，直接使用数组
 const allPhotos = ref([
+{ image: '/CJNLP2025/images/memory/P1084540.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084341.min.jpg' },
-  { image: '/CJNLP2025/images/memory/P1084350.min.jpg' },
+
   { image: '/CJNLP2025/images/memory/P1084357.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084367.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084377.min.jpg' },
@@ -125,6 +126,7 @@ const allPhotos = ref([
   { image: '/CJNLP2025/images/memory/P1084451.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084452.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084457.min.jpg' },
+  { image: '/CJNLP2025/images/memory/P1084350.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084458.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084460.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084462.min.jpg' },
@@ -150,7 +152,7 @@ const allPhotos = ref([
   { image: '/CJNLP2025/images/memory/P1084534.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084535.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084537.min.jpg' },
-  { image: '/CJNLP2025/images/memory/P1084540.min.jpg' },
+
   { image: '/CJNLP2025/images/memory/P1084552.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084555.min.jpg' },
   { image: '/CJNLP2025/images/memory/P1084560.min.jpg' },
