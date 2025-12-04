@@ -70,17 +70,17 @@ import {reactive} from "vue";
 // 静态组织数据（从 http://10.17.0.10:8211/endpoint/org/list 获取）
 const orgListData = {
   "conference_chairs": [  
-    {"id":14,"avatar":"/CJNLP2025/images/committee/yuhao.png","name":"于浩","organization":"联想控股","order":1},
-    {"id":13,"avatar":"/CJNLP2025/images/committee/sutou.png","name":"須藤 克仁","organization":"奈良女子大学","order":0}
+    {"id":14,"avatar":"/images/committee/yuhao.png","name":"于浩","organization":"联想控股","order":1},
+    {"id":13,"avatar":"/images/committee/sutou.png","name":"須藤 克仁","organization":"奈良女子大学","order":0}
   ],
   "program_chairs": [
-    {"id":16,"avatar":"/CJNLP2025/images/committee/chengfei.png","name":"程飞","organization":"京都大学","order":1},
-    {"id":17,"avatar":"/CJNLP2025/images/committee/linhongyu.png","name":"林鸿宇","organization":"中国科学院软件研究所","order":0}
+    {"id":16,"avatar":"/images/committee/chengfei.png","name":"程飞","organization":"京都大学","order":1},
+    {"id":17,"avatar":"/images/committee/linhongyu.png","name":"林鸿宇","organization":"中国科学院软件研究所","order":0}
   ],
   "organizing_committee": [
-    {"id":11,"avatar":"/CJNLP2025/images/committee/licuochao.png","name":"李祖超","organization":"武汉大学","order":1},
-    {"id":15,"avatar":"/CJNLP2025/images/committee/zhangzuosheng.png","name":"张倬胜","organization":"上海交通大学","order":0},
-    {"id":18,"avatar":"/CJNLP2025/images/committee/jiangshu.png","name":"姜舒","organization":"南通大学","order":0}
+    {"id":11,"avatar":"/images/committee/licuochao.png","name":"李祖超","organization":"武汉大学","order":1},
+    {"id":15,"avatar":"/images/committee/zhangzuosheng.png","name":"张倬胜","organization":"上海交通大学","order":0},
+    {"id":18,"avatar":"/images/committee/jiangshu.png","name":"姜舒","organization":"南通大学","order":0}
   ]
 }
 
