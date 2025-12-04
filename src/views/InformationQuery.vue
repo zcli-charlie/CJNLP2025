@@ -48,7 +48,7 @@
       <template v-for="item in tableData" :key="item.id">
         <div class="table-item">
           <div class="table-item-bg">
-            <img src="../static/images/bg.png" alt="" />
+            <img src="../static/CJNLP2025/images/bg.png" alt="" />
           </div>
 
           <div class="table-item-content">
@@ -74,25 +74,25 @@
               <div class="table-item-content2-i">
                 <div class="table-item-content2-i-title">注册</div>
                 <div class="table-item-content2-i-content">
-                  <img src="../static/images/pick.png" alt="" v-if="item.is_reg === 1 || item.is_reg === 2" />
+                  <img src="../static/CJNLP2025/images/pick.png" alt="" v-if="item.is_reg === 1 || item.is_reg === 2" />
 
-                  <img src="../static/images/unpick.png" alt="" v-else />
+                  <img src="../static/CJNLP2025/images/unpick.png" alt="" v-else />
                 </div>
               </div>
               <div class="table-item-content2-i">
                 <div class="table-item-content2-i-title">缴费</div>
                 <div class="table-item-content2-i-content">
-                  <img src="../static/images/pick.png" alt="" v-if="item.payment_status === 1" />
+                  <img src="../static/CJNLP2025/images/pick.png" alt="" v-if="item.payment_status === 1" />
 
-                  <img src="../static/images/unpick.png" alt="" v-else />
+                  <img src="../static/CJNLP2025/images/unpick.png" alt="" v-else />
                 </div>
               </div>
               <div class="table-item-content2-i">
                 <div class="table-item-content2-i-title">签到</div>
                 <div class="table-item-content2-i-content">
-                  <img src="../static/images/pick.png" alt="" v-if="item.check_in === 1" />
+                  <img src="../static/CJNLP2025/images/pick.png" alt="" v-if="item.check_in === 1" />
 
-                  <img src="../static/images/unpick.png" alt="" v-else />
+                  <img src="../static/CJNLP2025/images/unpick.png" alt="" v-else />
                 </div>
               </div>
             </div>

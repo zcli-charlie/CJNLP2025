@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue(),codeInspectorPlugin({
     bundler: 'vite'
   })],
-  base: '/',
+  base: '/CJNLP2025/',
   server: {
     host: '0.0.0.0',
     port: 3000,

@@ -222,7 +222,7 @@ def compress_directory(directory_path, min_size_kb=200, max_size_kb=300, backup=
 def main():
     """主函数"""
     # 默认目录
-    default_directory = "/Users/tianwen/Documents/my/public/images/memory"
+    default_directory = "/Users/tianwen/Documents/my/public/CJNLP2025/images/memory"
     
     # 从命令行参数获取目录，如果没有则使用默认目录
     if len(sys.argv) > 1:
