@@ -55,7 +55,8 @@
             :current-page="pageNo"
             :page-size="pageSize"
             :total="totalCount"
-            layout="total, prev, pager, next, jumper"
+            :layout="paginationLayout"
+            :pager-count="pagerCount"
             @current-change="handlePageChange"
             @size-change="handleSizeChange"
             class="photo-pagination"
@@ -103,6 +104,15 @@ const currentPhotoIndex = ref(0)
 const pageNo = ref(1)
 const pageSize = ref(12)
 const totalCount = ref(0)
+
+// 是否为移动端，用于控制分页组件展示内容
+const isMobile = ref(false)
+
+const paginationLayout = computed(() =>
+  isMobile.value ? 'prev, pager, next' : 'total, prev, pager, next, jumper'
+)
+
+const pagerCount = computed(() => (isMobile.value ? 5 : 7))
 
 // 静态照片数据 - 2025年CJNLP照片
 // 这里存储所有照片，直接使用数组
@@ -389,21 +399,33 @@ const resetComponentState = () => {
   fullscreenPhoto.value = null
   currentPhotoIndex.value = 0
   pageNo.value = 1
-  
   window.scrollTo(0, 0)
   unlockBodyScroll()
 }
 
+// 更新是否为移动端
+const updateIsMobile = () => {
+  if (typeof window !== 'undefined') {
+    isMobile.value = window.innerWidth <= 768
+  }
+}
+
 onMounted(() => {
   document.title = 'CJNLP 2025 思い出'
-  
   updateTotalCount()
   unlockBodyScroll()
   window.scrollTo(0, 0)
+
+  // 初始化并监听屏幕宽度变化
+  updateIsMobile()
+  window.addEventListener('resize', updateIsMobile)
 })
 
 onBeforeUnmount(() => {
   resetComponentState()
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', updateIsMobile)
+  }
 })
 </script>
 
