@@ -20,9 +20,23 @@
                    :key="agenda.id" 
                    :class="['schedule-row', agenda.is_special ? 'special-event' : '']">
                 <div class="time-cell">{{ agenda.time_range }}</div>
-                <div class="content-cell">
+                <div class="content-cell" :class="{ 'has-chair': agenda.chair_jp }">
                   <div class="event-title">{{ agenda.title_jp }}</div>
-                  <div v-if="agenda.description_jp" class="event-description">{{ agenda.description_jp }}</div>
+                  <div v-if="agenda.chair_jp" class="content-with-chair">
+                    <div class="content-left">
+                      <div v-if="agenda.description_jp" class="event-description">
+                        {{ agenda.description_jp }}
+                      </div>
+                    </div>
+                    <div class="content-right">
+                      <div class="chair-info">{{ agenda.chair_jp }}</div>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <div v-if="agenda.description_jp" class="event-description">
+                      {{ agenda.description_jp }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -36,9 +50,23 @@
                    :key="agenda.id" 
                    :class="['schedule-row', agenda.is_special ? 'special-event' : '']">
                 <div class="time-cell">{{ agenda.time_range }}</div>
-                <div class="content-cell">
+                <div class="content-cell" :class="{ 'has-chair': agenda.chair_jp }">
                   <div class="event-title">{{ agenda.title_jp }}</div>
-                  <div v-if="agenda.description_jp" class="event-description">{{ agenda.description_jp }}</div>
+                  <div v-if="agenda.chair_jp" class="content-with-chair">
+                    <div class="content-left">
+                      <div v-if="agenda.description_jp" class="event-description">
+                        {{ agenda.description_jp }}
+                      </div>
+                    </div>
+                    <div class="content-right">
+                      <div class="chair-info">{{ agenda.chair_jp }}</div>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <div v-if="agenda.description_jp" class="event-description">
+                      {{ agenda.description_jp }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -52,9 +80,23 @@
                    :key="agenda.id" 
                    :class="['schedule-row', agenda.is_special ? 'special-event' : '']">
                 <div class="time-cell">{{ agenda.time_range }}</div>
-                <div class="content-cell">
+                <div class="content-cell" :class="{ 'has-chair': agenda.chair_jp }">
                   <div class="event-title">{{ agenda.title_jp }}</div>
-                  <div v-if="agenda.description_jp" class="event-description">{{ agenda.description_jp }}</div>
+                  <div v-if="agenda.chair_jp" class="content-with-chair">
+                    <div class="content-left">
+                      <div v-if="agenda.description_jp" class="event-description">
+                        {{ agenda.description_jp }}
+                      </div>
+                    </div>
+                    <div class="content-right">
+                      <div class="chair-info">{{ agenda.chair_jp }}</div>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <div v-if="agenda.description_jp" class="event-description">
+                      {{ agenda.description_jp }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,9 +169,12 @@ const scheduleListData = [
         title: "主题报告1",
         title_en: "Keynote Speech 1",
         title_jp: "基調講演1",
-        description: "主讲人：赵海\n主持人：李祖超",
-        description_en: "Speaker: Hai Zhao\nChair: Zuchao Li",
-        description_jp: "講演者：赵海\n司会：李祖超",
+        description: "主讲人：赵海\n报告：Native Brain-like AI large model with SiFu learning",
+        description_en: "Speaker: Hai Zhao\nReport: Native Brain-like AI large model with SiFu learning",
+        description_jp: "講演者：赵海\n報告：Native Brain-like AI large model with SiFu learning",
+        chair:"主持人：李祖超",
+        chair_en:"Chair: Zuchao Li",
+        chair_jp:"司会：李祖超",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -141,9 +186,12 @@ const scheduleListData = [
         title: "主题报告2",
         title_en: "Keynote Speech 2",
         title_jp: "基調講演2",
-        description: "主讲人：须藤克仁\n主持人：李祖超",
-        description_en: "Speaker: Katsuhito Sudoh\nChair: Zuchao Li",
-        description_jp: "講演者：须藤克仁\n司会：李祖超",
+        description: "主讲人：须藤克仁\n报告：Recent Activities in Simultaneous Speech Translation",
+        description_en: "Speaker: Katsuhito Sudoh\nReport: Recent Activities in Simultaneous Speech Translation",
+        description_jp: "講演者：须藤克仁\n報告：Recent Activities in Simultaneous Speech Translation",
+        chair:"主持人：李祖超",
+        chair_en:"Chair: Zuchao Li",
+        chair_jp:"司会：李祖超",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -169,9 +217,12 @@ const scheduleListData = [
         title: "主题报告3",
         title_en: "Keynote Speech 3",
         title_jp: "基調講演3",
-        description: "主讲人：钟承志\n主持人：劉倩瑩",
-        description_en: "Speaker: Chengzhi Zhong\nChair: Qianying Liu",
-        description_jp: "講演者：钟承志\n司会：劉倩瑩",
+        description: "主讲人：钟承志\n报告：What Language Do Non-English-Centric Large Language Models Think in?",
+        description_en: "Speaker: Chengzhi Zhong\nReport: What Language Do Non-English-Centric Large Language Models Think in?",
+        description_jp: "講演者：钟承志\n報告：What Language Do Non-English-Centric Large Language Models Think in?",
+        chair:"主持人：劉倩瑩",
+        chair_en:"Chair: Qianying Liu",
+        chair_jp:"司会：劉倩瑩",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -183,9 +234,12 @@ const scheduleListData = [
         title: "主题报告4",
         title_en: "Keynote Speech 4",
         title_jp: "基調講演4",
-        description: "主讲人：刘康\n主持人：劉倩瑩",
-        description_en: "Speaker: Kang Liu\nChair: Qianying Liu",
-        description_jp: "講演者：刘康\n司会：劉倩瑩",
+        description: "主讲人：刘康\n报告：Shuttle between Symbolic Knowledge and Neural Parameters",
+        description_en: "Speaker: Kang Liu\nReport: Shuttle between Symbolic Knowledge and Neural Parameters",
+        description_jp: "講演者：刘康\n報告：Shuttle between Symbolic Knowledge and Neural Parameters",
+        chair:"主持人：劉倩瑩",
+        chair_en:"Chair: Qianying Liu",
+        chair_jp:"司会：劉倩瑩",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -211,9 +265,12 @@ const scheduleListData = [
         title: "主题报告5",
         title_en: "Keynote Speech 5",
         title_jp: "基調講演5",
-        description: "主讲人：肖桐\n主持人：赵阳",
-        description_en: "Speaker: Tong Xiao\nChair: Yang Zhao",
-        description_jp: "講演者：肖桐\n司会：赵阳",
+        description: "主讲人：肖桐\n报告：Some Applications of ODE Methods in NLP",
+        description_en: "Speaker: Tong Xiao\nReport: Some Applications of ODE Methods in NLP",
+        description_jp: "講演者：肖桐\n報告：Some Applications of ODE Methods in NLP",
+        chair:"主持人：赵阳",
+        chair_en:"Chair: Yang Zhao",
+        chair_jp:"司会：赵阳",
         is_special: 0,
         order: 0,
         midday: 2,
@@ -225,9 +282,12 @@ const scheduleListData = [
         title: "主题报告6",
         title_en: "Keynote Speech 6",
         title_jp: "基調講演6",
-        description: "主讲人：井佐原均\n主持人：赵阳",
-        description_en: "Speaker: Hitoshi Isahara\nChair: Yang Zhao",
-        description_jp: "講演者：井佐原均\n司会：赵阳",
+        description: "主讲人：井佐原均\n报告：Natural Language Processing for Therapy, Counseling, and Patient Information Support",
+        description_en: "Speaker: Hitoshi Isahara\nReport: Natural Language Processing for Therapy, Counseling, and Patient Information Support",
+        description_jp: "講演者：井佐原均\n報告：Natural Language Processing for Therapy, Counseling, and Patient Information Support",
+        chair:"主持人：赵阳",
+        chair_en:"Chair: Yang Zhao",
+        chair_jp:"司会：赵阳",
         is_special: 0,
         order: 0,
         midday: 2,
@@ -253,9 +313,12 @@ const scheduleListData = [
         title: "主题报告7",
         title_en: "Keynote Speech 7",
         title_jp: "基調講演7",
-        description: "主讲人：劉倩瑩\n主持人：林鸿宇",
-        description_en: "Speaker: Qianying Liu\nChair: Hongyu Lin",
-        description_jp: "講演者：劉倩瑩\n司会：林鸿宇",
+        description: "主讲人：劉倩瑩\n报告：7 Points to Tsinghua but 10 Points to 清华? Assessing Agentic Large Language Models in Multilingual National Bias",
+        description_en: "Speaker: Qianying Liu\nReport: 7 Points to Tsinghua but 10 Points to 清华? Assessing Agentic Large Language Models in Multilingual National Bias",
+        description_jp: "講演者：劉倩瑩\n報告：7 Points to Tsinghua but 10 Points to 清华? Assessing Agentic Large Language Models in Multilingual National Bias",
+        chair:"主持人：林鸿宇",
+        chair_en:"Chair: Hongyu Lin",
+        chair_jp:"司会：林鸿宇",
         is_special: 0,
         order: 0,
         midday: 2,
@@ -267,9 +330,12 @@ const scheduleListData = [
         title: "主题报告8",
         title_en: "Keynote Speech 8",
         title_jp: "基調講演8",
-        description: "主讲人：赵阳\n主持人：林鸿宇",
-        description_en: "Speaker: Yang Zhao\nChair: Hongyu Lin",
-        description_jp: "講演者：赵阳\n司会：林鸿宇",
+        description: "主讲人：赵阳\n报告：From Text Lines to Full Pages: Text Image Machine Translation for Multiple Scenarios",
+        description_en: "Speaker: Yang Zhao\nReport: From Text Lines to Full Pages: Text Image Machine Translation for Multiple Scenarios",
+        description_jp: "講演者：赵阳\n報告：From Text Lines to Full Pages: Text Image Machine Translation for Multiple Scenarios",
+        chair:"主持人：林鸿宇",
+        chair_en:"Chair: Hongyu Lin",
+        chair_jp:"司会：林鸿宇",
         is_special: 0,
         order: 0,
         midday: 2,
@@ -321,9 +387,12 @@ const scheduleListData = [
         title: "主题报告9",
         title_en: "Keynote Speech 9",
         title_jp: "基調講演9",
-        description: "主讲人：中岩浩巳\n主持人：須藤克仁",
-        description_en: "Speaker: Hiromi Nakaiwa\nChair: Katsuhito Sudoh",
-        description_jp: "講演者：中岩浩巳\n司会：須藤克仁",
+        description: "主讲人：中岩浩巳\n报告：Data Scientist Development Project through Academic-Industrial Collaboration",
+        description_en: "Speaker: Hiromi Nakaiwa\nReport: Data Scientist Development Project through Academic-Industrial Collaboration",
+        description_jp: "講演者：中岩浩巳\n報告：Data Scientist Development Project through Academic-Industrial Collaboration",
+        chair:"主持人：須藤克仁",
+        chair_en:"Chair: Katsuhito Sudoh",
+        chair_jp:"司会：須藤克仁",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -335,9 +404,12 @@ const scheduleListData = [
         title: "主题报告10",
         title_en: "Keynote Speech 10",
         title_jp: "基調講演10",
-        description: "主讲人：陈文亮\n主持人：須藤克仁",
-        description_en: "Speaker: Wenliang Chen\nChair: Katsuhito Sudoh",
-        description_jp: "講演者：陈文亮\n司会：須藤克仁",
+        description: "主讲人：陈文亮\n报告：UAQFact: Evaluating Factual Knowledge Utilization of LLMs on Unanswerable Questions",
+        description_en: "Speaker: Wenliang Chen\nReport: UAQFact: Evaluating Factual Knowledge Utilization of LLMs on Unanswerable Questions",
+        description_jp: "講演者：陈文亮\n報告：UAQFact: Evaluating Factual Knowledge Utilization of LLMs on Unanswerable Questions",
+        chair:"主持人：須藤克仁",
+        chair_en:"Chair: Katsuhito Sudoh",
+        chair_jp:"司会：須藤克仁",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -363,9 +435,12 @@ const scheduleListData = [
         title: "主题报告11",
         title_en: "Keynote Speech 11",
         title_jp: "基調講演11",
-        description: "主讲人：程飞\n主持人：陈文亮",
-        description_en: "Speaker: Fei Cheng\nChair: Wenliang Chen",
-        description_jp: "講演者：程飞\n司会：陈文亮",
+        description: "主讲人：程飞\n报告：SpeechIQ: Speech-Agentic Intelligence Quotient Across Cognitive Levels in Voice Understanding by Large Language Models",
+        description_en: "Speaker: Fei Cheng\nReport: SpeechIQ: Speech-Agentic Intelligence Quotient Across Cognitive Levels in Voice Understanding by Large Language Models",
+        description_jp: "講演者：程飞\n報告：SpeechIQ: Speech-Agentic Intelligence Quotient Across Cognitive Levels in Voice Understanding by Large Language Models",
+        chair:"主持人：陈文亮",
+        chair_en:"Chair: Wenliang Chen",
+        chair_jp:"司会：陈文亮",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -377,9 +452,12 @@ const scheduleListData = [
         title: "主题报告12",
         title_en: "Keynote Speech 12",
         title_jp: "基調講演12",
-        description: "主讲人：李祖超\n主持人：陈文亮",
-        description_en: "Speaker: Zuchao Li\nChair: Wenliang Chen",
-        description_jp: "講演者：李祖超\n司会：陈文亮",
+        description: "主讲人：李祖超\n报告：Towards Local Large Language Models",
+        description_en: "Speaker: Zuchao Li\nReport: Towards Local Large Language Models",
+        description_jp: "講演者：李祖超\n報告：Towards Local Large Language Models",
+        chair:"主持人：陈文亮",
+        chair_en:"Chair: Wenliang Chen",
+        chair_jp:"司会：陈文亮",
         is_special: 0,
         order: 0,
         midday: 1,
@@ -569,10 +647,48 @@ h3 {
   color: #333;
 }
 
+.content-cell.has-chair {
+  padding: 0;
+}
+
+.content-with-chair {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.content-right {
+  width: 180px;
+  flex-shrink: 0;
+  border-left: 1px solid #eee;
+  padding-left: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.chair-info {
+  color: #1890ff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .event-title {
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #1a1a1a;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.content-cell.has-chair .event-title {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0;
 }
 
 .event-description {
@@ -688,6 +804,27 @@ h3 {
   .event-description {
     font-size: 0.85rem;
   }
+
+  .content-with-chair {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .content-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #eee;
+    padding-left: 0;
+    padding-top: 0.8rem;
+  }
+
+  .content-cell.has-chair .event-title {
+    padding: 0.8rem 0.8rem 0.5rem 0.8rem;
+  }
+
+  .content-with-chair {
+    padding: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -728,6 +865,28 @@ h3 {
 
   .event-description {
     font-size: 0.8rem;
+  }
+
+  .content-with-chair {
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  .content-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #eee;
+    padding-left: 0;
+    padding-top: 0.6rem;
+  }
+
+  .content-cell.has-chair .event-title {
+    padding: 0.6rem 0.6rem 0.4rem 0.6rem;
+  }
+
+  .chair-info {
+    font-size: 0.85rem;
   }
 
   .period-header {
